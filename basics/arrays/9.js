@@ -26,5 +26,3 @@ function evenArray2(n) {
 }
 
 console.log(evenArray2(100));
-
-
