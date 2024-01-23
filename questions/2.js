@@ -8,7 +8,7 @@ function generateEvenOddLessThanN(n) {
   let oddNumber = [];
 
   for (let i = 0; i < n; i++) {
-    if (i % 2 === 0) {
+    if (n % 2 === 0) {
       evenNumber.push(i);
     } else {
       oddNumber.push(i);
@@ -24,26 +24,24 @@ const n = 10;
 //   generateEvenOddLessThanN(n)
 // );
 
-
-
 // Generate 'N' Even and Odd Numbers
 function generateNEvenOddNumbers(N) {
-  let evenNumbers = [];
-  let oddNumbers = [];
+  let evenNumber = [];
+  let oddNumber = [];
 
   let count = 0;
   let num = 0;
 
   while (count < N) {
     if (num % 2 === 0) {
-      evenNumbers.push(num);
-      count++;
+      evenNumber.push(num);
+      num++;
     } else {
-      oddNumbers.push(num);
+      oddNumber.push(num);
     }
     num++;
   }
 
-  return { evenNumbers, oddNumbers };
+  return { evenNumber, oddNumber };
 }
 console.log("First", n, "Even and Odd numbers:", generateNEvenOddNumbers(n));
