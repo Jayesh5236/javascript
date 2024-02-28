@@ -232,28 +232,8 @@ var data = [
 ];
 
 var emails = [];
-
-data.forEach((ele, i) => {
-  emails.push(ele.email);
-});
-// console.log(emails);
-
 var usernames = [];
-
-data.forEach((ele, i) => {
-  usernames.push(ele.username);
-});
-
-// console.log(usernames);
-
-var addresses = [];
-
-data.forEach((ele, i) => {
-  addresses.push(ele.address);
-});
-
-// console.log(addresses);
-
+// var addresses = [];
 // var filteredData = [];
 
 // {
@@ -261,10 +241,17 @@ data.forEach((ele, i) => {
 //     companyName : "xyz llc"
 // }
 
+data.forEach((ele, i) => {
+  emails.push(ele.email);
+  usernames.push(ele.username);
+});
+
+// console.log(emails);
+
 let filteredData = data.map((ele, i) => {
   return {
-    name: ele.name,
-    companyName: ele.company.name,
+    name: ele.username,
+    companyName: ele.company,
   };
 });
 
