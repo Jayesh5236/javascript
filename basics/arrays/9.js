@@ -7,3 +7,5 @@ function evenArray(n) {
   return arr
 }
 console.log(evenArray(100));
+
+
