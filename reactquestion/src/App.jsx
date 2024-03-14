@@ -6,6 +6,11 @@ function App() {
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
   const [count, setCount] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisibilty = () => {
+    setVisible(!visible);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -70,10 +75,16 @@ function App() {
         <div className="">
           <ul>
             {posts.map((post) => (
-            <li key={post.id}>{post.title}</li>
+              <li key={post.id}>{post.title}</li>
             ))}
           </ul>
         </div>
+      </div>
+      <div className="">
+        <button onClick={toggleVisibilty}>
+          {visible ? "Hide Message" : "Show Message"}
+        </button>
+        {visible && <p>This Is Hidden Message</p>}
       </div>
     </div>
   );
